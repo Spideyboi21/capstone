@@ -1,4 +1,4 @@
-#!/Users/joshuaholt/projects/capstone/lit/bin/python3.5
+#!/Users/chris/projects/capstone/lit/bin/python3.5
 from __future__ import print_function
 import base64
 import os
@@ -14,5 +14,3 @@ if __name__ == "__main__":
     print("''')), Image.open(BytesIO(base64.decodestring(b'''")
     base64.encode(open(font + ".pbm", "rb"), sys.stdout)
     print("'''))))")
-
-# End of file

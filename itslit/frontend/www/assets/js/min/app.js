@@ -12,9 +12,9 @@ function teamSlider() {
         navigationText: [],
         pagination: !1,
         uniqueHistory: !0
-    }), findElement(".team-nav-right").click(function() {
+    }), findElement(".team-nav-right").click(function () {
         owl.trigger("owl.next");
-    }), findElement(".team-nav-left").click(function() {
+    }), findElement(".team-nav-left").click(function () {
         owl.trigger("owl.prev");
     });
 }
@@ -23,21 +23,21 @@ function findElement(selector) {
     var box = null;
     return $(".page-on-center").length > 0 ? (box = $(".view-main").find(".page-on-center " + selector),
     0 === box.length && (box = $(".view-main").find(".page-on-center" + selector))) : box = $(".view-main").find(".page").find(selector),
-    box;
+        box;
 }
 
 function naxvarBg() {
     var navbar = $(".navbar-anim-on-scroll"), box = null, cls = "active";
     return 0 === navbar.length ? !1 : (box = $(".page-on-center").length > 0 ? navbar.next().find(".page-on-center .page-content") : navbar.next().find(".page .page-content"),
-    box.scrollTop() > 10 ? navbar.addClass(cls) : navbar.removeClass(cls), void box.scroll(function() {
+        box.scrollTop() > 10 ? navbar.addClass(cls) : navbar.removeClass(cls), void box.scroll(function () {
         $(this).scrollTop() > 40 ? navbar.addClass(cls) : navbar.removeClass(cls);
     }));
 }
 
 function showLineChart(obj) {
     var data = {
-        labels: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ],
-        datasets: [ {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [{
             label: "My dataset",
             fillColor: "rgba(54, 133, 176, 0.2)",
             strokeColor: "rgba(54, 133, 176, 1)",
@@ -45,8 +45,8 @@ function showLineChart(obj) {
             pointStrokeColor: "rgba(54, 133, 176, 1)",
             pointHighlightFill: "rgba(255, 255, 255, 1)",
             pointHighlightStroke: "rgba(54, 133, 176, 1)",
-            data: [ 65, 59, 80, 81, 56, 55, 40 ]
-        } ]
+            data: [65, 59, 80, 81, 56, 55, 40]
+        }]
     }, chart = new Chart(obj).Line(data, {
         responsive: !0,
         pointDotRadius: 3,
@@ -66,8 +66,8 @@ function showLineChart(obj) {
 
 function showLineChartPage(obj) {
     var data = {
-        labels: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ],
-        datasets: [ {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [{
             label: "My dataset",
             fillColor: "rgba(54, 133, 176, 0.2)",
             strokeColor: "rgba(54, 133, 176, 1)",
@@ -75,7 +75,7 @@ function showLineChartPage(obj) {
             pointStrokeColor: "rgba(54, 133, 176, 1)",
             pointHighlightFill: "rgba(0, 0, 0, 1)",
             pointHighlightStroke: "rgba(54, 133, 176, 1)",
-            data: [ 65, 59, 80, 81, 56, 55, 40 ]
+            data: [65, 59, 80, 81, 56, 55, 40]
         }, {
             label: "My dataset 2",
             fillColor: "rgba(224, 61, 14, 0.2)",
@@ -84,8 +84,8 @@ function showLineChartPage(obj) {
             pointStrokeColor: "rgba(224, 61, 14, 1)",
             pointHighlightFill: "rgba(0, 0, 0, 1)",
             pointHighlightStroke: "rgba(224, 61, 14, 1)",
-            data: [ 32, 34, 67, 12, 37, 55, 20 ]
-        } ]
+            data: [32, 34, 67, 12, 37, 55, 20]
+        }]
     }, chart = new Chart(obj).Line(data, {
         responsive: !0,
         pointDotRadius: 4,
@@ -105,8 +105,8 @@ function showLineChartPage(obj) {
 
 function showBarChartPage(obj) {
     var data = {
-        labels: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ],
-        datasets: [ {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [{
             label: "My dataset",
             fillColor: "rgba(54, 133, 176, 0.2)",
             strokeColor: "rgba(54, 133, 176, 1)",
@@ -114,7 +114,7 @@ function showBarChartPage(obj) {
             pointStrokeColor: "rgba(0, 0, 0, 1)",
             pointHighlightFill: "rgba(0, 0, 0, 1)",
             pointHighlightStroke: "rgba(54, 133, 176, 1)",
-            data: [ 65, 59, 80, 81, 56, 55, 40 ]
+            data: [65, 59, 80, 81, 56, 55, 40]
         }, {
             label: "My dataset 2",
             fillColor: "rgba(224, 61, 14, 0.2)",
@@ -123,8 +123,8 @@ function showBarChartPage(obj) {
             pointStrokeColor: "rgba(0, 0, 0, 1)",
             pointHighlightFill: "rgba(0, 0, 0, 1)",
             pointHighlightStroke: "rgba(224, 61, 14, 1)",
-            data: [ 32, 34, 67, 12, 37, 55, 20 ]
-        } ]
+            data: [32, 34, 67, 12, 37, 55, 20]
+        }]
     }, chart = new Chart(obj).Bar(data, {
         responsive: !0,
         pointDotRadius: 2,
@@ -143,7 +143,7 @@ function showBarChartPage(obj) {
 }
 
 function showPieChartPage(obj) {
-    var data = [ {
+    var data = [{
         value: 300,
         color: "rgba(54, 133, 176, 1)",
         highlight: "rgba(54, 133, 176, 0.5)",
@@ -158,7 +158,7 @@ function showPieChartPage(obj) {
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Text 3"
-    } ], chart = new Chart(obj).Pie(data, {
+    }], chart = new Chart(obj).Pie(data, {
         responsive: !0,
         tooltipFontSize: 12
     });
@@ -166,7 +166,7 @@ function showPieChartPage(obj) {
 }
 
 function showDoughnutChartPage(obj) {
-    var data = [ {
+    var data = [{
         value: 300,
         color: "rgba(54, 133, 176, 1)",
         highlight: "rgba(54, 133, 176, 0.5)",
@@ -181,7 +181,7 @@ function showDoughnutChartPage(obj) {
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Text 3"
-    } ], chart = new Chart(obj).Doughnut(data, {
+    }], chart = new Chart(obj).Doughnut(data, {
         responsive: !0,
         tooltipFontSize: 12
     });
@@ -190,8 +190,8 @@ function showDoughnutChartPage(obj) {
 
 function showRadarChartPage(obj) {
     var data = {
-        labels: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ],
-        datasets: [ {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [{
             label: "My dataset",
             fillColor: "rgba(54, 133, 176, 0.2)",
             strokeColor: "rgba(54, 133, 176, 1)",
@@ -199,7 +199,7 @@ function showRadarChartPage(obj) {
             pointStrokeColor: "rgba(54, 133, 176, 1)",
             pointHighlightFill: "rgba(0, 0, 0, 1)",
             pointHighlightStroke: "rgba(54, 133, 176, 1)",
-            data: [ 65, 59, 80, 81, 56, 55, 40 ]
+            data: [65, 59, 80, 81, 56, 55, 40]
         }, {
             label: "My dataset 2",
             fillColor: "rgba(224, 61, 14, 0.2)",
@@ -208,8 +208,8 @@ function showRadarChartPage(obj) {
             pointStrokeColor: "rgba(224, 61, 14, 1)",
             pointHighlightFill: "rgba(0, 0, 0, 1)",
             pointHighlightStroke: "rgba(224, 61, 14, 1)",
-            data: [ 32, 34, 67, 12, 37, 55, 20 ]
-        } ]
+            data: [32, 34, 67, 12, 37, 55, 20]
+        }]
     }, chart = new Chart(obj).Radar(data, {
         responsive: !0,
         pointDotRadius: 3,
@@ -229,7 +229,7 @@ function showRadarChartPage(obj) {
 }
 
 function showPolarChartPage(obj) {
-    var data = [ {
+    var data = [{
         value: 300,
         color: "rgba(54, 133, 176, 1)",
         highlight: "rgba(54, 133, 176, 0.5)",
@@ -244,7 +244,7 @@ function showPolarChartPage(obj) {
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Text 3"
-    } ], chart = new Chart(obj).PolarArea(data, {
+    }], chart = new Chart(obj).PolarArea(data, {
         responsive: !0,
         scaleFontSize: 10,
         tooltipFontSize: 12
@@ -255,7 +255,7 @@ function showPolarChartPage(obj) {
 function hidePreloader() {
     jQuery(".page-preloader").animate({
         opacity: 0
-    }, function() {
+    }, function () {
         jQuery(this).hide();
     });
 }
@@ -267,7 +267,7 @@ var myApp = new Framework7({
     modalTitle: "Title"
 }), $$ = Dom7;
 
-$$("body").on("click", ".js-add-to-fav", function() {
+$$("body").on("click", ".js-add-to-fav", function () {
     myApp.alert("You love this post!", "");
 });
 
@@ -275,15 +275,72 @@ var mainView = myApp.addView(".view-main", {
     dynamicNavbar: !0
 });
 
-$$(".popup-splash").on("opened", function() {
-    myApp.swiper(".swiper-container", {
-        speed: 400,
-        pagination: ".swiper-pagination",
-        paginationBulletRender: function(index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
+myApp.onPageInit('whatsLit', function (page) {
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    var csrftoken = getCookie('csrftoken');
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
         }
     });
-}), $$(document).on("pageAfterAnimation", function(e) {
+
+    $.ajax({
+        url: 'http://localhost:8000/api/v1/offers/',
+        type: 'GET',
+        success: function (data) {
+            var site_url = 'http://localhost:8000';
+            var html = '';
+            for (var i = 0; i < data.length; i++) {
+                html += '<div class="owl-item" style="width: 425px;">' +
+                    '<div><div class="article-title">' +
+                    '<span class="badge badge-third">' + data[i].green_text + '</span>' +
+                    '<span class="badge badge-primary">' + data[i].red_text + '</span>' +
+                    '<h2><a href="shop-product-1.html">' + data[i].name + '</a></h2>' +
+                    '<div class="shop-data">' +
+                    '<span class="shop-price-discount">$' + data[i].price_before_discount + '</span>' +
+                    '<span class="shop-price">$' + data[i].price_after_discount + '</span>' +
+                    '<span class="data">' +
+                    '<span>' + data[i].likes + ' likes</span>' +
+                    '</span></div></div>' +
+                    '<img style="max-width: 425px;" src="' + site_url + data[i].photo.image + '" alt="">' +
+                    '</div></div>';
+            }
+            $(".owl-wrapper").html(html);
+            console.log('hit')
+
+        },
+        error: function (e) {
+            //called when there is an error
+            console.log(e.message);
+        }
+    });
+    // $(".owl-example").owlCarousel();
+}).trigger();
+
+$$(document).on("pageAfterAnimation", function (e) {
     if ($(".page-on-center .chart-content").length > 0) {
         var ctx = document.querySelector(".page-on-center .chart-content").getContext("2d");
         showLineChart(ctx);
@@ -313,8 +370,9 @@ $$(".popup-splash").on("opened", function() {
         showPolarChartPage(ctx);
     }
     naxvarBg(), teamSlider();
-}), $$(document).on("pageInit", function(e) {
+}), $$(document).on("pageInit", function (e) {
     var page = e.detail.page;
+    console.log(page);
     myApp.calendar({
         input: "#ks-calendar-default"
     }), myApp.calendar({
@@ -336,33 +394,33 @@ $$(".popup-splash").on("opened", function() {
         }
     }), myApp.calendar({
         container: "#calendar-inline-container",
-        value: [ new Date() ]
-    }), $$(".notification-default").on("click", function() {
+        value: [new Date()]
+    }), $$(".notification-default").on("click", function () {
         myApp.addNotification({
             title: "Framework7",
             message: "This is a simple notification message with title and message"
         });
-    }), $$(".notification-full").on("click", function() {
+    }), $$(".notification-full").on("click", function () {
         myApp.addNotification({
             title: "Framework7",
             subtitle: "Notification subtitle",
             message: "This is a simple notification message with custom icon and subtitle",
             media: '<i class="icon icon-f7"></i>'
         });
-    }), $$(".notification-custom").on("click", function() {
+    }), $$(".notification-custom").on("click", function () {
         myApp.addNotification({
             title: "My Awesome App",
             subtitle: "New message from John Doe",
             message: "Hello, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut posuere erat. Pellentesque id elementum urna, a aliquam ante. Donec vitae volutpat orci. Aliquam sed molestie risus, quis tincidunt dui.",
             media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">'
         });
-    }), $$(".notification-callback").on("click", function() {
+    }), $$(".notification-callback").on("click", function () {
         myApp.addNotification({
             title: "My Awesome App",
             subtitle: "New message from John Doe",
             message: "Hello, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut posuere erat. Pellentesque id elementum urna, a aliquam ante. Donec vitae volutpat orci. Aliquam sed molestie risus, quis tincidunt dui.",
             media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">',
-            onClose: function() {
+            onClose: function () {
                 myApp.alert("Notification closed");
             }
         });
@@ -377,9 +435,10 @@ $$(".popup-splash").on("opened", function() {
             id: "44244432@N03"
         },
         itemTemplate: '<li><a href="{{image_m}}" class="flickr"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
-    }, function(data) {
+    }, function (data) {
         $(".flickr-content li a").swipebox();
-    }), $(".owl-carousel").length > 0 && $(".owl-carousel").owlCarousel(), $(".featured-articles-slider").length > 0 && $(".featured-articles-slider").owlCarousel({
+    }),
+    $(".owl-carousel").length > 0 && $(".owl-carousel").owlCarousel(), $(".featured-articles-slider").length > 0 && $(".featured-articles-slider").owlCarousel({
         singleItem: !0,
         navigation: !1,
         navigationText: [],
@@ -388,15 +447,16 @@ $$(".popup-splash").on("opened", function() {
         loop: !0,
         autoPlay: 3e3,
         stopOnHover: !0
-    }), $(".js-validate").length > 0 && $("body").on("click", ".js-form-submit", function() {
+    }),
+    $(".js-validate").length > 0 && $("body").on("click", ".js-form-submit", function () {
         var form = $(this).parents("form"), valid = form.valid();
         if ("contact" === page.name && valid) {
             var data = form.serializeObject();
-            myApp.showPreloader(), $.post("/email.php", data).done(function(data) {
+            myApp.showPreloader(), $.post("/email.php", data).done(function (data) {
                 myApp.hidePreloader();
                 var response = JSON.parse(data);
                 response.error ? myApp.alert(response.msg, "") : (myApp.alert(response.msg, ""),
-                form.find("input[type=text], input[type=email], textarea").val(""));
+                    form.find("input[type=text], input[type=email], textarea").val(""));
             });
         }
     });
@@ -405,7 +465,7 @@ $$(".popup-splash").on("opened", function() {
         autoLayout: !0
     }), myMessagebar = myApp.messagebar(".messagebar");
     // Handle message
-    $$(".messagebar .link").on("click", function() {
+    $$(".messagebar .link").on("click", function () {
         // Message text
         var messageText = myMessagebar.value().trim();
         // Exit if empy message
@@ -413,27 +473,27 @@ $$(".popup-splash").on("opened", function() {
             // Empty messagebar
             myMessagebar.clear();
             // Random message type
-            var avatar, name, messageType = [ "sent", "received" ][Math.round(Math.random())];
+            var avatar, name, messageType = ["sent", "received"][Math.round(Math.random())];
             "received" === messageType && (avatar = "http://lorempixel.com/output/people-q-c-100-100-9.jpg",
-            name = "Kate"), // Add message
-            myMessages.addMessage({
-                // Message text
-                text: messageText,
-                // Random message type
-                type: messageType,
-                // Avatar and name:
-                avatar: avatar,
-                name: name,
-                // Day
-                day: conversationStarted ? !1 : "Today",
-                time: conversationStarted ? !1 : new Date().getHours() + ":" + new Date().getMinutes()
-            }), // Update conversation flag
-            conversationStarted = !0;
+                name = "Kate"), // Add message
+                myMessages.addMessage({
+                    // Message text
+                    text: messageText,
+                    // Random message type
+                    type: messageType,
+                    // Avatar and name:
+                    avatar: avatar,
+                    name: name,
+                    // Day
+                    day: conversationStarted ? !1 : "Today",
+                    time: conversationStarted ? !1 : new Date().getHours() + ":" + new Date().getMinutes()
+                }), // Update conversation flag
+                conversationStarted = !0;
         }
-    }), videoInit();
-}), $(document).ready(function() {
+    });
+}), $(document).ready(function () {
     if (null !== localStorage.getItem("newOptions") && localStorage.getItem("newOptions") !== !0 || (myApp.popup(".popup-splash"),
-    localStorage.setItem("newOptions", !0)), $(".chart-content").length > 0) {
+            localStorage.setItem("newOptions", !0)), $(".chart-content").length > 0) {
         var obj = document.querySelector(".chart-content"), ctx = obj.getContext("2d");
         showLineChart(ctx);
     }
@@ -461,20 +521,20 @@ $$(".popup-splash").on("opened", function() {
         var obj = document.querySelector(".polar-chart-content"), ctx = obj.getContext("2d");
         showPolarChartPage(ctx);
     }
-    naxvarBg(), $(".js-toggle-menu").on("click", function() {
+    naxvarBg(), $(".js-toggle-menu").on("click", function () {
         $(this).next().slideToggle(200), $(this).find("span").toggleClass("icon-chevron-down").toggleClass("icon-chevron-up");
-    }), $("body").on("click", ".js-gallery-col", function() {
+    }), $("body").on("click", ".js-gallery-col", function () {
         var cols = $(this).data("cols");
         $(".gallery-list").attr({
             "data-cols": cols
         }), $(".js-gallery-col").removeClass("active"), $(this).addClass("active");
-    }), setTimeout(function() {
-        videoInit(), teamSlider();
+    }), setTimeout(function () {
+        teamSlider();
     }, 100);
-}), $.fn.serializeObject = function() {
+}), $.fn.serializeObject = function () {
     var o = {}, a = this.serializeArray();
-    return $.each(a, function() {
-        void 0 !== o[this.name] ? (o[this.name].push || (o[this.name] = [ o[this.name] ]),
-        o[this.name].push(this.value || "")) : o[this.name] = this.value || "";
+    return $.each(a, function () {
+        void 0 !== o[this.name] ? (o[this.name].push || (o[this.name] = [o[this.name]]),
+            o[this.name].push(this.value || "")) : o[this.name] = this.value || "";
     }), o;
 };

@@ -1,4 +1,4 @@
-#!/Users/joshuaholt/projects/capstone/lit/bin/python3.5
+#!/Users/chris/projects/capstone/lit/bin/python3.5
 #
 # The Python Imaging Library.
 # $Id$

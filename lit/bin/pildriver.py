@@ -1,4 +1,4 @@
-#!/Users/joshuaholt/projects/capstone/lit/bin/python3.5
+#!/Users/chris/projects/capstone/lit/bin/python3.5
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine

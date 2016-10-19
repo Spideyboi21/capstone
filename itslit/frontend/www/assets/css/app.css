@@ -47,11 +47,6 @@ Template:	    Indra - Mobile Web/APP Template
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#fire-background::before {
-  background-color: transparent!important;
-}
-#flame-wrapper {position: fixed; z-index: -1; left:0; width: 100%; top: 20px;}
-/*this is mine*/.full-page-image{background-color: transparent!important;}
 
 .icon-home:before {
   content: "\e600";
